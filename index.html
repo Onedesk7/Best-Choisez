@@ -1,1 +1,82 @@
-html 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Better Choicez</title>
+  
+</head>
+
+<body>
+  <h1>Best Choices with <q>Awesom Searches</q></h1>
+<input type="text" id= "bar" placeholder ="Search Awesome">
+
+  <button id = "btn">🔍</button>
+  <div id ="box"></div>
+  
+<link rel="stylesheet" href="Style.css">
+  
+  <script>
+    
+let products = [{
+   "name" : "Meta Ray-Ban ",
+  "caption" : "Meta Ray-Ban (Gen 3) Wayfarer, Matte Black, Clear Lenses,AI Glasses with Camera for Men, Women",
+  "note" : "Meta Glasses with Bluethooth and WiFi (from Amazon)",
+  "price" : "₹44,300",
+  "link" : "https://link.amazon/B08Pfs6ye"
+ },
+ {   "name" : "OnePlus N6x",
+  "caption" : "OnePlus N6x | 4GB+64GB | Ice Blue | 7000mAh Battery | Power for Days | 36-Months Smoothness | Smooth 120Hz Display | Largest 5300mm2 Cooling System | Military-Grade Durability.|| 300+ bought in past month Product Images and Videos (AI-Generated Alt Text)",
+  
+  "note" :"OnePlus Massive 7000mAh|| Ultra-smooth 120hz Refresh Rate(from Amazon)",
+  "price" : "₹19,999",
+  "link" : "https://link.amazon/B0gfvaOMX"},
+  
+  {   "name" : "boAt Headphones(skyblue,black)",
+  "caption" : "truke Newly Launched BTG 500 Over The Ear Gaming Headphone with 40mm Drivers, 10H of Playtime, Dual Pairing, Gaming Mode (50ms Latency) with RGB LEDs, TF Card with Volume Control, BT 5.4 (Sky Blue) 100+ bought in past month",
+  "note" : "3.9 rating || 64% off(from Amazon)",
+  "price" : "₹899",
+  "link" : "https://link.amazon/B095eoD96"}
+ ];
+const bar = document.getElementById("bar")
+
+const btn = document.getElementById("btn")
+
+const box = document.getElementById("box")
+
+btn.addEventListener("click", function(){
+ 
+ let text = bar.value.toLowerCase().trim()
+   box.innerHTML="";
+  
+products.forEach(function(product){
+  
+if (text&&
+  product.name.toLowerCase().includes(text)
+) {
+     
+  let show = document.createElement("div")
+  
+show.innerHTML =
+  "<h1>" + product.name + "</h1>" +
+  "<p>" + product.caption + "</p>" +
+  "<p>" + product.note + "</p>" +
+  "<p>" + product.price + "</p>" + 
+  "<a href =" + product.link + "> view Link  </a>";
+  
+  box.appendChild(show);
+  
+   
+   
+   }   
+}   
+
+)
+  
+})
+
+  </script>
+</body>
+
+</html>
