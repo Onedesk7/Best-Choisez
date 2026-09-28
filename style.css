@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 25px;
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#bar {
+  width: 65%;
+  height: 45px;
+  border: 2px solid gray;
+  border-radius: 25px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+#btn {
+  width: 50px;
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+#btn:active {
+  transform: scale(0.9);
+}
+
+#box {
+  margin-top: 30px;
+}
+.product {
+  background-color: white;
+  padding: 15px;
+ 
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px gray;
+  font-size: 22px;
+}
+
